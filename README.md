@@ -27,14 +27,24 @@ First we are going to log back into our DC and Client VM as the admin. Once done
 </p>
 <br /v
 
-<img src= 
+<p>
+<img src= https://i.imgur.com/s4ayuQu.png height="80%" width="80%" alt="Disk Sanitization Steps"/> 
 </p>
 <br /v
 
-<img src= 
+<p>
+<img src= https://i.imgur.com/Pp7JDsC.png height="80%" width="80%" alt="Disk Sanitization Steps"/> 
+</p>
+<p>
+To create an A record, we are going to go into DC VM and go into server manager, tap tools and click DNS-> Tap DC-> tap arrow down for forward lookup zones-> then tap mydomain.com. Right click to create a new host (A), name the domain mainframe and type your Domain controller ip address just to see the connection. click done  when you are finished and ping mainframe in CLient Vm to see the reply.
+</p>
+<br /v
 
 <p>
-<img src= 
+<img src=   
+</p> 
+<p>
+hot hot  
 </p>
 <br />
 
@@ -42,16 +52,10 @@ First we are going to log back into our DC and Client VM as the admin. Once done
 <img src=  height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-First we are going to log back into our DC and Client VM as the admin. Once done, we are going to be testing hostname "mainframe" to get a connection. Mainframe is just a made up word used for this experiement. Without creating the DNS record, pinging the hostname "mainframe" will not be successful. The Client VM checks the DNS cache, its local host file, and the DNS server when we ping "mainframe". In order to recieve a reply from "mainframe" we must create an A record r.com/yAlrhZw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<p>
-Now we will change the record address of "mainframe" to 8.8.8.8 if we go back to the client machine it will still ping the old adress even though we changed it. That is because we have to flush the DNS with the command ipconfig /flushdns. That will clear the DNS cache, when we attempt to ping mainframe again the address of the new record will show. 
+ hot hot 
 </p>
-<br />
-<img src="https://i.imgur.com/KYNmZMz.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<img src="https://i.imgur.com/80ARdZu.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
+<br /v
+
 Lastly we will configure a CNAME record that points the host "search" to "www.google.com" If we ping "search" ping will not be able to find the host. we have to go back into the DNS tool on DC-1 and create the CNAME record "search". Once we create the CNAME record is created and we ping "search" it will resolve to www.google.com.
 </p>
 <br />
