@@ -22,17 +22,27 @@ In this lab we will test Domain Name System (DNS). This will improve our knowled
 
 <h2>Actions and Observations</h2>
 </p>
-<br />
+<p>
+First we are going to log back into our DC and Client VM as the admin. Once done, we are going to be testing hostname "mainframe" to get a connection. Mainframe is just a made up word used for this experiement. Without creating the DNS record, pinging the hostname "mainframe" will not be successful. The Client VM checks the DNS cache, its local host file, and the DNS server when we ping "mainframe". In order to recieve a reply from "mainframe" we must create an A record.
+</p>
+<br /v
+
+<img src= 
+</p>
+<br /v
+
+<img src= 
 
 <p>
-<img src= First we will be inspecting DNS A-Records on the server A records are hostname to IP address mappings. We are going to create an A record on DC-1 for "mainframe" and have it point to DC-1's private IP address. If we try to ping mainframe without setting the DNS record it will not work. When we ping "mainframe" Client-1 is checking the DNS cache, checking its local host file and checking the DNS server. To create an A-record go to the AD->Tools->DNS->DC-1->Forward lookup zones->mydomain.com-> right click and create a new A record, title it mainframe. An A record is hostname to ip address mapping. If we go back to the client machine and ping mainframe we will get a reply. 
+<img src= 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/xKePr4k.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src=  height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
-<img src="https://i.imgur.com/yAlrhZw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+First we are going to log back into our DC and Client VM as the admin. Once done, we are going to be testing hostname "mainframe" to get a connection. Mainframe is just a made up word used for this experiement. Without creating the DNS record, pinging the hostname "mainframe" will not be successful. The Client VM checks the DNS cache, its local host file, and the DNS server when we ping "mainframe". In order to recieve a reply from "mainframe" we must create an A record r.com/yAlrhZw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <p>
 Now we will change the record address of "mainframe" to 8.8.8.8 if we go back to the client machine it will still ping the old adress even though we changed it. That is because we have to flush the DNS with the command ipconfig /flushdns. That will clear the DNS cache, when we attempt to ping mainframe again the address of the new record will show. 
 </p>
