@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/CtGfsq8.png" alt="osTicket logo"/>
+<img src=https://i.imgur.com/tr98pf0.png height="80%" width="80%" alt="Disk Sanitization Steps"/> 
 </p>
 
 <h1>Building Intuition for DNS</h1>
