@@ -49,19 +49,20 @@ Next we will go back to DC VM and change mainframe's ip adress to 8.8.8.8. Ping 
 <br />
 
 <p>
-<img src= https://i.imgur.com/hJe0KSe.png  height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src= https://i.imgur.com/hJe0KSe.png height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br /v
  
 <p>
-<img src= 
+<img src= https://i.imgur.com/jmqrecj.png height="80%" width="80%" alt="Disk Sanitization Steps"/>  
 </p>
 <p>
-Lastly we will configure a CNAME record that points the host "search" to "www.google.com" If we ping "search" ping will not be able to find the host. we have to go back into the DNS tool on DC-1 and create the CNAME record "search". Once we create the CNAME record is created and we ping "search" it will resolve to www.google.com.
+Last but not least, we'll set up a CNAME record to direct the host "search" to "www.google.com." Ping won't be able to locate the host if we use the "search" option. To construct the CNAME record "search," we must create a CNAME for "search" in dns manager in DC VM.
 </p>
-<br />
+<br /v
+
 <p>
-<img src="https://i.imgur.com/LgomfqN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src= https://i.imgur.com/xnsS4sS.png height="80%" width="80%" alt="Disk Sanitization Steps"/> 
 </p>
-<img src="https://i.imgur.com/NovtDrd.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <p>
+Go back to client vm.Ping "search" and nslookup "search" and observe the changes. Once you observe the changes you will see that it mapped you to google.com. 
