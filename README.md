@@ -36,26 +36,27 @@ First we are going to log back into our DC and Client VM as the admin. Once done
 <img src= https://i.imgur.com/Pp7JDsC.png height="80%" width="80%" alt="Disk Sanitization Steps"/> 
 </p>
 <p>
-To create an A record, we are going to go into DC VM and go into server manager, tap tools and click DNS-> Tap DC-> tap arrow down for forward lookup zones-> then tap mydomain.com. Right click to create a new host (A), name the domain mainframe and type your Domain controller ip address just to see the connection. click done  when you are finished and ping mainframe in CLient Vm to see the reply.
+To create an A record, we are going to go into DC VM and go into server manager, tap tools and click DNS-> Tap DC-> tap arrow down for forward lookup zones-> then tap mydomain.com. Right click to create a new host (A), name the domain mainframe and type your Domain controller ip address just to see the connection. Click apply and done  when you are finished and ping mainframe in CLient Vm to see the reply.
 </p>
 <br /v
 
 <p>
-<img src=   
+<img src=https://i.imgur.com/r9we0Za.png height="80%" width="80%" alt="Disk Sanitization Steps"/>    
 </p> 
 <p>
-hot hot  
+Next we will go back to DC VM and change mainframe's ip adress to 8.8.8.8. Ping mainframe in Client Vm and observe the changes,now either two things could have happened, the ip address changed or it didn't. It could still show the original ip address that you had for a records, thats because it is still lingereing in your computers local cache. To make sure of the change, one must use ipconfig/ flushdns. Observe the adress of the new record is showing up, check for the new changes by pinging mainframe. Look below for further details.
 </p>
 <br />
 
 <p>
-<img src=  height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
- hot hot 
+<img src= https://i.imgur.com/hJe0KSe.png  height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <br /v
-
+ 
+<p>
+<img src= 
+</p>
+<p>
 Lastly we will configure a CNAME record that points the host "search" to "www.google.com" If we ping "search" ping will not be able to find the host. we have to go back into the DNS tool on DC-1 and create the CNAME record "search". Once we create the CNAME record is created and we ping "search" it will resolve to www.google.com.
 </p>
 <br />
